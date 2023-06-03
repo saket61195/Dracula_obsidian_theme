@@ -1,0 +1,815 @@
+:root {
+  --font-size-normal: 19px;
+  /* --font-size-code: 16px; */
+  --font-size-code: 24px;
+  --font-size-side-dock: 16px;
+  --font-size-side-dock-title: 18px;
+  --font-size-status-bar: 16px;
+  /* --font-size-h1: 24px; */
+  --font-size-h1: 30px;
+  --font-size-h2: 23px;
+  --font-size-h3: 22px;
+  --font-size-h4: 21px;
+  --font-size-h5: 20px;
+  --font-size-h6: 19px;
+  --font-family-editor: Avenir, Avenir Next, sans-serif;
+  --font-family-preview: Avenir, Avenir Next, sans-serif;
+}
+
+.theme-light,
+.theme-dark {
+  --background-primary: #282a36;
+  --background-primary-alt: #44475a;
+  --background-secondary: #282a36;
+  --background-secondary-alt: #282a36;
+  --background-accent: #f8f8f2;
+  --background-modifier-border: #f8f8f2;
+  --background-modifier-form-field: rgba(0, 0, 0, 0.2);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #50fa7b;
+  /*no sure*/
+  --background-modifier-error: #3d0000;
+  /*no sure*/
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: #470000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+  --text-accent: #ffb86c;
+  --text-accent-hover: #8be9fd;
+  --text-normal: #f8f8f2;
+  --text-muted: #f8f8f2;
+  --text-faint: #bd93f9;
+  --text-highlight-bg: #ff5555;
+  --text-error: #ff79c6;
+  --text-error-hover: #ff79c6;
+  --text-selection: #6272a4;
+  /* Chromium precess this color with alpha channel */
+  /* --text-on-accent: #bd93f9; */
+  --text-on-accent: #282a36;
+  --interactive-normal: #44475a;
+  --interactive-hover: #ff5555;
+  /* --interactive-accent: #44475a; */
+  --interactive-accent: #50fa7b;
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: #ff5555;
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+  --scrollbar-bg: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+
+  --text-title-h1: #ff79c6;
+  --text-title-h2: #bd93f9;
+  --text-title-h3: #ff5555;
+  --text-title-h4: #ffb86c;
+  --text-title-h5: #50fa7b;
+  --text-title-h6: #8be9fd;
+  --inline-code: #bd93f9;
+  --code-block: #8be9fd;
+  --pre-code: #44475a;
+  --blockquote-border: #ffb86c;
+  --vim-cursor: #ff5555;
+  --border-color: #2b2727;
+  --border-modified-color: #f8f8f2;
+  /*also like transparent*/
+}
+
+/*-------------------------------------*/
+/*      Search the following lines     */
+/*     to jump to specific section     */
+/*-------------------------------------*/
+/*  add folder icons and file type     */
+/*  resize-handle and borders          */
+/*                tags                 */
+/*                link                 */
+/*                Cursor               */
+/* basic format in EDITOR and PREVIEW  */
+/* Headings - EDITOR and PREVIEW       */
+/*         Code block in  Preview      */
+/*       Code block in Editor          */
+/*              Brackets               */
+/*             Blockquote              */
+/*             table                   */
+/*               Checkbox              */
+/*           html in editor            */
+/*              popover                */
+/*            Side panel               */
+/* internal embedded link in preview   */
+/*             graph view              */
+/*            settings                 */
+/*            Hide side bar            */
+/*           width of content          */
+/*    at a rule line before ul list    */
+/*  Hide Scrollbar (recommend for mac) */
+/*-------------------------------------*/
+
+
+/***************************************/
+/*  add folder icons and file type     */
+/***************************************/
+
+
+.nav-folder:not(.mod-root) .nav-folder-title-content::before {
+  display: inline-block;
+  content: "";
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(114, 203, 120);
+}
+
+.nav-folder:not(.mod-root):not(.is-collapsed) .nav-folder-title-content::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3Cpath d='M384 480h48c11.4 0 21.9-6 27.6-15.9l112-192c5.8-9.9 5.8-22.1 .1-32.1S555.5 224 544 224H144c-11.4 0-21.9 6-27.6 15.9L48 357.1V96c0-8.8 7.2-16 16-16H181.5c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c21 21 49.5 32.8 79.2 32.8H416c8.8 0 16 7.2 16 16v32h48V160c0-35.3-28.7-64-64-64H298.5c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H87.7 384z'/%3E%3C/svg%3E") no-repeat;
+}
+
+.nav-folder:not(.mod-root).is-collapsed .nav-folder-title-content::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3Cpath d='M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z'/%3E%3C/svg%3E") no-repeat;
+
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
+  margin-right: 4px;
+  position: relative;
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -5px;
+  background-color: white;
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3crect width='8' height='1' x='6' y='13' fill='black' rx='.5'/%3e%3crect width='8' height='1' x='6' y='15' fill='black' rx='.5'/%3e%3cpath fill='black' d='M6.952 12c.2 0 .28-.04.28-.176 0-.168-.28-.392-.28-.648l.44-.92h2.232l.44.92c0 .256-.28.48-.28.648 0 .136.072.176.28.176h1.608c.2 0 .28-.04.28-.176 0-.168-.304-.4-.416-.648 0 0-1.96-4.008-2.096-4.52 0 0-.096-.24-.432-.24-.336 0-.424.216-.424.216-.144.528-2.168 4.544-2.168 4.544-.12.248-.416.48-.416.648 0 .136.072.176.272.176h.68Zm2.456-2.2h-1.8l.896-1.912.904 1.912Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e")
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])>.nav-file-title-content::before {
+  background-color: white;
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M16 4.5H4c-.83 0-1.5.67-1.5 1.5v8c0 .83.67 1.5 1.5 1.5h12c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5ZM5.25 6A1.23 1.23 0 0 1 6.5 7.25 1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6ZM4 12.4 6 10l2 1.07L12 7l4 3.27V14H4v-1.6Z' opacity='.1'/%3e%3cpath d='M16 4H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm1 10c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v8Z'/%3e%3cpath fill-opacity='.8' d='M16 10.27V14H4v-1.6L6 10l2 1.07L12 7l4 3.27ZM6.5 7.25A1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6 1.23 1.23 0 0 1 6.5 7.25Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+
+/***************************************/
+/*  resize-handle and borders          */
+/***************************************/
+
+/*vertical resize-handle*/
+.workspace-split.mod-vertical>*>.workspace-leaf-resize-handle,
+.workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+.workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+  width: 1px !important;
+  background-color: var(--border-color);
+}
+
+/*horizontal resize-handle*/
+.workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle {
+  height: 1px !important;
+  background-color: var(--border-color);
+}
+
+/*workspace ribbon when collapsed*/
+.workspace-ribbon.is-collapsed {
+  background-color: var(--background-primary-alt);
+}
+
+/*the vertical split*/
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical>.workspace-split,
+.workspace-split.mod-vertical>.workspace-leaf,
+.workspace-tabs {
+  padding-right: 0px;
+}
+
+/*status-bar*/
+.status-bar {
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px;
+}
+
+.document-search-container {
+  border-top: 0px;
+  border-right: 0px;
+  z-index: inherit;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-right: 1px solid var(--border-color);
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 1px solid var(--border-color);
+}
+
+/*************************************/
+/*                tags               */
+/*************************************/
+
+/* Tag hover in preview */
+a.tag:hover {
+  color: var(--text-accent) !important;
+}
+
+/* Tag Color in editor and preview*/
+.cm-hashtag,
+a.tag {
+  color: var(--text-accent-hover) !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+}
+
+/*********************************/
+/*             link              */
+/*********************************/
+
+/* link */
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link,
+.cm-url {
+  text-decoration: none !important;
+}
+
+/* the url string in editor */
+.cm-s-obsidian span.cm-string {
+  color: var(--text-accent-hover) !important;
+}
+
+/* make external links italics to differentiate */
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+/*footnote*/
+.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian span.cm-footref {
+  color: var(--text-accent) !important;
+}
+
+/***************************************/
+/*                Cursor               */
+/***************************************/
+
+/* Cursor color and opacity */
+
+.cm-fat-cursor .CodeMirror-cursor,
+.cm-animate-fat-cursor {
+  width: 0.5em;
+  background: var(--vim-cursor);
+  opacity: 60% !important;
+}
+
+/**************************************/
+/* basic format in EDITOR and PREVIEW */
+/**************************************/
+
+/* font for everything outside of editor/preview panes */
+.app-container {
+  font-family: var(--font-family-preview);
+}
+
+/* set the text selection color for preview mode */
+::-moz-selection {
+  background-color: var(--text-selection);
+}
+
+::selection {
+  background-color: var(--text-selection);
+}
+
+/* normal text outside of headings and code of editor */
+.cm-s-obsidian,
+.mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+}
+
+/* normal text outside of headings and code of preview */
+.markdown-preview-view,
+.mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+  /* padding-top: 0px; */
+  padding-left: 2% !important;
+  padding-right: 1% !important;
+}
+
+/* bold in preview and editor */
+strong,
+.cm-strong {
+  font-weight: 600;
+  color: #50fa7b;
+}
+
+/* emphasis in preview and editor */
+em,
+.cm-em {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+/* strikethrough in preview and editor */
+s,
+.cm-strikethrough {
+  color: var(--text-muted);
+}
+
+/* list in editor */
+.cm-s-obsidian span.cm-formatting-list {
+  color: var(--text-normal) !important;
+}
+
+/* horizontal line in preview */
+.markdown-preview-view hr {
+  background-color: var(--text-faint) !important;
+}
+
+/* embedded images */
+img:not(.emoji) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* img hover zoom out img*/
+img:hover {
+  transform: scale(1.04);
+  transition: transform 0.25s ease-in-out 0s;
+}
+
+.community-theme img:hover {
+  transform: none;
+}
+
+/*********************************/
+/* Headings - EDITOR and PREVIEW */
+/*********************************/
+
+
+/* headings for editor and preview */
+.cm-header-1,
+.markdown-preview-view h1 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h1);
+  color: var(--text-title-h1);
+}
+
+.cm-header-2,
+.markdown-preview-view h2 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h2);
+  color: var(--text-title-h2);
+}
+
+.cm-header-3,
+.markdown-preview-view h3 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  color: var(--text-title-h3);
+}
+
+.cm-header-4,
+.markdown-preview-view h4 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h4);
+  color: var(--text-title-h4);
+}
+
+.cm-header-5,
+.markdown-preview-view h5 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h5);
+  color: var(--text-title-h5);
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h6);
+  color: var(--text-title-h6);
+}
+
+/***************************************/
+/*         Code block in  Preview      */
+/***************************************/
+
+/* code blocks in preview */
+pre code {
+  font-family: monaco !important;
+  font-size: var(--font-size-code) !important;
+  padding: 6px !important;
+  line-height: normal;
+  display: block;
+  color: var(--code-block) !important;
+}
+
+/* .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  padding-left: var(--size-4-4);
+  color: var(--code-block);
+} */
+
+/* padding of code blocks in preview */
+.markdown-preview-view pre {
+  padding: 0px !important;
+}
+
+/* font-size of in-line block for preview */
+.markdown-preview-view code {
+  font-size: var(--font-size-code);
+}
+
+
+/* remove the shadow that typically affect light mode */
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow: none !important;
+  color: var(--text-faint) !important;
+  background-color: var(--pre-code);
+}
+
+/***************************************/
+/*              Brackets               */
+/***************************************/
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-accent) !important;
+}
+
+/***************************************/
+/*             Blockquote              */
+/***************************************/
+
+/* for editor */
+.cm-quote {
+  color: var(--text-normal) !important;
+  font-style: italic;
+}
+
+/* for preview */
+.markdown-preview-view blockquote {
+  background-color: var(--pre-code);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 30px 0px;
+  font-style: italic;
+}
+
+/***************************************/
+/*             table                   */
+/***************************************/
+
+th {
+  font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+  font-weight: 800;
+  background-color: var(--background-secondary) !important;
+}
+
+thead {
+  border-bottom: 3px solid var(--background-modifier-border);
+}
+
+.table {
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/***************************************/
+/*               Checkbox              */
+/***************************************/
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  color: var(--text-accent);
+  font-size: 1em;
+  line-height: 1.25em;
+  width: 1.2em;
+  text-align: center;
+  text-shadow: 0 0 0.1em var(--text-accent);
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  /* -webkit-appearance: none; */
+  top: 0.2em !important;
+  right: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em var(--text-muted);
+}
+
+.checkbox-container {
+  background-color: var(--background-primary-alt);
+}
+
+
+/***************************************/
+/*              popover                */
+/***************************************/
+
+.popover {
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+}
+
+
+/***************************************/
+/*            Side panel               */
+/***************************************/
+
+/* search result in backlink or file search */
+.search-result-file-title {
+  font-size: 15px;
+}
+
+.search-result-file-matches,
+.search-empty-state {
+  font-size: var(--font-size-side-dock);
+}
+
+/*decrease the spacing between result items*/
+.search-result-file-title,
+.search-result-file-match {
+  padding: 0px 10px;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+/*backlink pane*/
+.workspace-leaf-content[data-type="backlink"] .view-content {
+  background-color: var(--background-secondary);
+}
+
+.workspace-leaf-content[data-type="tag"] .tag-pane-tag-count,
+.workspace-leaf-content[data-type="tag"] .tag-pane-tag-text {
+  font-size: var(--font-size-side-dock);
+}
+
+.workspace-leaf-content[data-type="backlink"] .search-result-file-matches {
+  font-size: var(--font-size-side-dock);
+}
+
+/***************************************/
+/* internal embedded link in preview   */
+/***************************************/
+
+/* Naked Embeds */
+.markdown-embed-title {
+  display: none;
+}
+
+.markdown-preview-view .markdown-embed-content>:first-child {
+  margin-top: 0;
+}
+
+.markdown-preview-view .markdown-embed-content>:last-child {
+  margin-bottom: 0;
+}
+
+/*remove the following two line, you will get border and scroll*/
+.markdown-preview-view .markdown-embed {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.markdown-preview-view .markdown-embed-content {
+  max-height: unset;
+  background-color: var(--background-secondary);
+}
+
+/* the link on the top right corner*/
+.markdown-embed-link {
+  color: var(--text-faint) !important;
+}
+
+.markdown-embed-link:hover {
+  color: var(--text-accent) !important;
+}
+
+/***************************************/
+/*             graph view              */
+/***************************************/
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+  color: var(--text-accent) !important;
+}
+
+.graph-view.color-text {
+  color: var(--text-normal) !important;
+}
+
+.graph-view.color-line {
+  color: #6272a4;
+}
+
+.graph-view.color-fill {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type="graph"] .view-content {
+  background-color: var(--background-primary);
+}
+
+/***************************************/
+/*            settings                 */
+/***************************************/
+
+.modal.mod-settings button:not(.mod-cta):hover {
+  background-color: var(--interactive-accent-hover);
+  color: var(--text-on-accent);
+}
+
+/***************************************/
+/*            Hide side bar            */
+/***************************************/
+
+.workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn,
+.workspace-ribbon:not(:hover) .side-dock-actions,
+/* .workspace-ribbon:not(:hover) .side-dock-settings {
+  display: none;
+  transition: all 300ms ease-in-out;
+} */
+
+/* .workspace-ribbon:not(:hover) {
+  width: 0px;
+  transition: all 300ms ease-in-out;
+}
+
+.workspace-split.mod-left-split {
+  margin-left: 0px;
+}
+
+.workspace-split.mod-right-split {
+  margin-right: 0px;
+} */
+
+/***************************************/
+/*           width of content          */
+/***************************************/
+
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+  max-width: 900px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+/* header */
+
+.theme-dark .view-header {
+  background-color: var(--background-primary) !important;
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 3px solid var(--border-modified-color) !important;
+}
+
+.theme-dark .view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary)) !important;
+}
+
+.theme-dark .workspace-leaf.mod-active .view-header {
+  background-color: var(--background-secondary-alt) !important;
+  border-top: 0px !important;
+  border-bottom: 3px solid var(--interactive-accent) !important;
+}
+
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
+}
+
+.workspace-leaf.mod-active .view-header-title,
+.workspace-leaf.mod-active .view-header-icon {
+  color: var(--background-modifier-border);
+}
+
+.view-header-title,
+.view-header-icon,
+.view-action {
+  color: var(--text-faint);
+}
+
+.view-header-title {
+  font-size: 20px;
+}
+
+/***************************************/
+/*    at a rule line before ul list    */
+/***************************************/
+
+ul ul {
+  position: relative;
+}
+
+ul ul::before {
+  content: '';
+  border-left: 1px solid var(--border-color);
+  position: absolute;
+}
+
+ul ul::before {
+  left: -1em;
+  top: 0;
+  bottom: 0;
+}
+
+/* rule line when there are checkboxes*/
+ul .task-list-item ul::before {
+  left: 0.15em !important
+}
+
+/***************************************/
+/*       Code block in Editor          */
+/***************************************/
+
+/* in-line block for editor */
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
+  background-color: var(--pre-code-bg);
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+/* Editor CodeBlock TEXT Appearance */
+.cm-s-obsidian pre.HyperMD-codeblock {
+  font-family: monaco !important;
+  font-size: var(--font-size-code) !important;
+  padding: 1px !important;
+  display: block;
+  color: var(--code-block) !important;
+  font-weight: 500;
+  text-indent: 0px !important;
+}
+
+/*remove the border of codeblock in editor */
+.HyperMD-codeblock-bg {
+  border: 0px !important;
+}
+
+/*an active line highlight in vim normal mode 
+.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground{
+  background-color: var(--text-selection) !important;
+} */
+
+/* in-line block for preview */
+code {
+  color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+/* graph css  */
+.theme-dark .graph-view.color-arrow {
+  color: #50fa7b;
+}
+
+.theme-dark .graph-view.color-fill-tag {
+  color: #ffb86c;
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+  color: #ff5555;
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #6272a4;
+}
+
+.search-result-collapse-indicator {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  color: var(--text-faint);
+  transition: transform 100ms ease-in-out;
+  padding: 0px !important;
+}
