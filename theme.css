@@ -16,6 +16,7 @@
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 }
 
+
 .theme-light,
 .theme-dark {
   --background-primary: #282a36;
@@ -62,7 +63,8 @@
   --text-title-h4: #ffb86c;
   --text-title-h5: #50fa7b;
   --text-title-h6: #8be9fd;
-  --inline-code: #bd93f9;
+  /* --inline-code: #bd93f9; */
+  --inline-code: #e9e90c;
   --code-block: #8be9fd;
   --pre-code: #44475a;
   --blockquote-border: #ffb86c;
@@ -558,6 +560,7 @@ thead {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
+
 
 /*backlink pane*/
 .workspace-leaf-content[data-type="backlink"] .view-content {
