@@ -1,4 +1,6 @@
 :root {
+  --vt-ml: 0px;
+  --vt-fsize: 28px;
   --font-size-normal: 19px;
   /* --font-size-code: 16px; */
   --font-size-code: 24px;
@@ -19,9 +21,11 @@
 
 .theme-light,
 .theme-dark {
-  --background-primary: #282a36;
+  /* --background-primary: #282a36; */
+  --background-primary: #020517;
   --background-primary-alt: #44475a;
-  --background-secondary: #282a36;
+  /* --background-secondary: #282a36; */
+  --background-secondary: #020517;
   --background-secondary-alt: #282a36;
   --background-accent: #f8f8f2;
   --background-modifier-border: #f8f8f2;
@@ -71,13 +75,15 @@
   --vim-cursor: #ff5555;
   --border-color: #2b2727;
   --border-modified-color: #f8f8f2;
-  /*also like transparent*/
+  --vtcolor1: rgb(130, 57, 226) --vtcolor2: rgb(82, 236, 247)
+    /*also like transparent*/
 }
 
 /*-------------------------------------*/
 /*      Search the following lines     */
 /*     to jump to specific section     */
 /*-------------------------------------*/
+/*   modify font nav folder title      */
 /*  add folder icons and file type     */
 /*  resize-handle and borders          */
 /*                tags                 */
@@ -103,6 +109,23 @@
 /*  Hide Scrollbar (recommend for mac) */
 /*-------------------------------------*/
 
+/***************************************/
+/*   modify font nav folder title      */
+/***************************************/
+
+.nav-file-title,
+.nav-folder-title {
+  font-size: 14px
+}
+
+.nav-folder.mod-root>.nav-folder-title,
+.workspace-drawer-header-name-text {
+  font-size: var(--vt-fsize);
+  font-family: var(--font-family-editor);
+  margin-left: var(--vt-ml);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
 /***************************************/
 /*  add folder icons and file type     */
@@ -117,6 +140,7 @@
   height: 15px;
   width: 15px;
   background-color: rgb(114, 203, 120);
+  /* background-color: #50fa7b; */
 }
 
 .nav-folder:not(.mod-root):not(.is-collapsed) .nav-folder-title-content::before {
