@@ -1,6 +1,8 @@
 # Dracula for [Obsidian.md](https://obsidian.md)
 
+> A dark theme for [Obsidian](https://obisidian.md), compatible to Obsidian V 1.3.4
 
+![Screenshot](./demo.png)
 
 ## Install
 This theme has been selected as one of the built-in community themes for Obsidian, you can find the newest version in Settings -> Plugins -> Community Themes and apply the theme by simply clicking the "Use" button.
