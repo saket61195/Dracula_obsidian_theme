@@ -1,4 +1,4 @@
-# Dracula for [Obsidian.md](https://obsidian.md)
+# Dracula Theme for [Obsidian.md](https://obsidian.md)
 
 > A dark theme for [Obsidian](https://obisidian.md), compatible to Obsidian V 1.3.4
 
