@@ -75,8 +75,9 @@
   --vim-cursor: #ff5555;
   --border-color: #2b2727;
   --border-modified-color: #f8f8f2;
-  --vtcolor1: rgb(130, 57, 226) --vtcolor2: rgb(82, 236, 247)
-    /*also like transparent*/
+  --vtcolor1: rgb(130, 57, 226);
+  --vtcolor2: rgb(82, 236, 247);
+  /*also like transparent*/
 }
 
 /*-------------------------------------*/
