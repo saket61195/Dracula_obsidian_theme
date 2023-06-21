@@ -22,3 +22,15 @@ This theme is created and maintained by saket.
 ## License
 
 [MIT License](./LICENSE)
+
+## Disclaimer
+
+This theme is provided as-is and is designed for personal use. It has not
+been tested on all platforms or with all features and may not work as expected
+with all future updates. If you notice something looks wrong, please open a bug
+report or pull request so it can be fixed.
+
+I did not create the original Dracula Plus colour palette. Full credit for that
+goes to the original [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md). I have selected
+colours from the original theme, adjusted them, and added additional colours for
+the purposes of adapting the theme to work with other apps e.g. Obsidian and Notion.
