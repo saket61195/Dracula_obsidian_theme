@@ -14,11 +14,6 @@
 
 4. Restart Obsidian.
 
-
-## Creator
-
-This theme is created and maintained by saket. 
-
 ## License
 
 [MIT License](./LICENSE)
