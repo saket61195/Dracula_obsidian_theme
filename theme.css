@@ -18,7 +18,6 @@
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 }
 
-
 .theme-light,
 .theme-dark {
   /* --background-primary: #282a36; */
@@ -77,6 +76,7 @@
   --border-modified-color: #f8f8f2;
   --vtcolor1: rgb(130, 57, 226);
   --vtcolor2: rgb(82, 236, 247);
+  --empty-line-height: 1em;
   /*also like transparent*/
 }
 
@@ -116,7 +116,7 @@
 
 .nav-file-title,
 .nav-folder-title {
-  font-size: 14px
+  font-size: 14px;
 }
 
 .nav-folder.mod-root>.nav-folder-title,
@@ -131,7 +131,6 @@
 /***************************************/
 /*  add folder icons and file type     */
 /***************************************/
-
 
 .nav-folder:not(.mod-root) .nav-folder-title-content::before {
   display: inline-block;
@@ -150,7 +149,6 @@
 
 .nav-folder:not(.mod-root).is-collapsed .nav-folder-title-content::before {
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3Cpath d='M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z'/%3E%3C/svg%3E") no-repeat;
-
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title .nav-file-title-content::before {
@@ -162,10 +160,15 @@
   height: 20px;
   vertical-align: -5px;
   background-color: white;
-  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3crect width='8' height='1' x='6' y='13' fill='black' rx='.5'/%3e%3crect width='8' height='1' x='6' y='15' fill='black' rx='.5'/%3e%3cpath fill='black' d='M6.952 12c.2 0 .28-.04.28-.176 0-.168-.28-.392-.28-.648l.44-.92h2.232l.44.92c0 .256-.28.48-.28.648 0 .136.072.176.28.176h1.608c.2 0 .28-.04.28-.176 0-.168-.304-.4-.416-.648 0 0-1.96-4.008-2.096-4.52 0 0-.096-.24-.432-.24-.336 0-.424.216-.424.216-.144.528-2.168 4.544-2.168 4.544-.12.248-.416.48-.416.648 0 .136.072.176.272.176h.68Zm2.456-2.2h-1.8l.896-1.912.904 1.912Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e")
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg clip-path='url(%23a)'%3e%3cpath fill='black' fill-opacity='.1' stroke='black' d='M14 17.5H6A1.5 1.5 0 0 1 4.5 16V4A1.5 1.5 0 0 1 6 2.5h5.086a.5.5 0 0 1 .353.146l3.915 3.915a.5.5 0 0 1 .146.353V16a1.5 1.5 0 0 1-1.5 1.5Z'/%3e%3cpath stroke='black' d='M11.5 2.5v3a1 1 0 0 0 1 1h3'/%3e%3crect width='8' height='1' x='6' y='13' fill='black' rx='.5'/%3e%3crect width='8' height='1' x='6' y='15' fill='black' rx='.5'/%3e%3cpath fill='black' d='M6.952 12c.2 0 .28-.04.28-.176 0-.168-.28-.392-.28-.648l.44-.92h2.232l.44.92c0 .256-.28.48-.28.648 0 .136.072.176.28.176h1.608c.2 0 .28-.04.28-.176 0-.168-.304-.4-.416-.648 0 0-1.96-4.008-2.096-4.52 0 0-.096-.24-.432-.24-.336 0-.424.216-.424.216-.144.528-2.168 4.544-2.168 4.544-.12.248-.416.48-.416.648 0 .136.072.176.272.176h.68Zm2.456-2.2h-1.8l.896-1.912.904 1.912Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"], [data-path$=".bmp"], [data-path$=".jpeg"], [data-path$=".jpg"], [data-path$=".png"], [data-path$=".gif"])>.nav-file-title-content::before {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title:is([data-path$=".svg"],
+  [data-path$=".bmp"],
+  [data-path$=".jpeg"],
+  [data-path$=".jpg"],
+  [data-path$=".png"],
+  [data-path$=".gif"])>.nav-file-title-content::before {
   background-color: white;
   -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3e%3cg fill='black' clip-path='url(%23a)'%3e%3cpath d='M16 4.5H4c-.83 0-1.5.67-1.5 1.5v8c0 .83.67 1.5 1.5 1.5h12c.83 0 1.5-.67 1.5-1.5V6c0-.83-.67-1.5-1.5-1.5ZM5.25 6A1.23 1.23 0 0 1 6.5 7.25 1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6ZM4 12.4 6 10l2 1.07L12 7l4 3.27V14H4v-1.6Z' opacity='.1'/%3e%3cpath d='M16 4H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm1 10c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v8Z'/%3e%3cpath fill-opacity='.8' d='M16 10.27V14H4v-1.6L6 10l2 1.07L12 7l4 3.27ZM6.5 7.25A1.23 1.23 0 0 1 5.25 8.5 1.23 1.23 0 0 1 4 7.25 1.23 1.23 0 0 1 5.25 6 1.23 1.23 0 0 1 6.5 7.25Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='white' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
@@ -368,7 +371,6 @@ img:hover {
 /* Headings - EDITOR and PREVIEW */
 /*********************************/
 
-
 /* headings for editor and preview */
 .cm-header-1,
 .markdown-preview-view h1 {
@@ -439,7 +441,9 @@ pre code {
 
 /* padding of code blocks in preview */
 .markdown-preview-view pre {
-  padding: 0px !important;
+  /* padding: 0px !important; */
+  padding: 0.75em 1em;
+  margin: 0 0 var(--empty-line-height) 0;
 }
 
 /* font-size of in-line block for preview */
@@ -447,14 +451,14 @@ pre code {
   font-size: var(--font-size-code);
 }
 
-
 /* remove the shadow that typically affect light mode */
 .theme-dark code[class*="language-"],
 .theme-dark pre[class*="language-"],
 .theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
   text-shadow: none !important;
-  color: var(--text-faint) !important;
+  /* color: var(--text-faint) !important; */
+  color: var(--text-normal) !important;
   background-color: var(--pre-code);
 }
 
@@ -520,7 +524,7 @@ thead {
 /***************************************/
 
 .markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   color: var(--text-accent);
   font-size: 1em;
@@ -547,7 +551,6 @@ thead {
   background-color: var(--background-primary-alt);
 }
 
-
 /***************************************/
 /*              popover                */
 /***************************************/
@@ -556,7 +559,6 @@ thead {
   border: 1px solid var(--border-color);
   background-color: var(--background-secondary);
 }
-
 
 /***************************************/
 /*            Side panel               */
@@ -586,7 +588,6 @@ thead {
   border-top-right-radius: 0 !important;
 }
 
-
 /*backlink pane*/
 .workspace-leaf-content[data-type="backlink"] .view-content {
   background-color: var(--background-secondary);
@@ -610,11 +611,11 @@ thead {
   display: none;
 }
 
-.markdown-preview-view .markdown-embed-content>:first-child {
+.markdown-preview-view .markdown-embed-content> :first-child {
   margin-top: 0;
 }
 
-.markdown-preview-view .markdown-embed-content>:last-child {
+.markdown-preview-view .markdown-embed-content> :last-child {
   margin-bottom: 0;
 }
 
@@ -713,7 +714,6 @@ thead {
   margin-right: 30px;
 }
 
-
 /* header */
 
 .theme-dark .view-header {
@@ -723,7 +723,9 @@ thead {
 }
 
 .theme-dark .view-header-title-container:after {
-  background: linear-gradient(to bottom, transparent, var(--background-primary)) !important;
+  background: linear-gradient(to bottom,
+      transparent,
+      var(--background-primary)) !important;
 }
 
 .theme-dark .workspace-leaf.mod-active .view-header {
@@ -733,7 +735,9 @@ thead {
 }
 
 .workspace-leaf.mod-active .view-header-title-container:after {
-  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
+  background: linear-gradient(to bottom,
+      transparent,
+      var(--background-secondary-alt)) !important;
 }
 
 .workspace-leaf.mod-active .view-header-title,
@@ -760,7 +764,7 @@ ul ul {
 }
 
 ul ul::before {
-  content: '';
+  content: "";
   border-left: 1px solid var(--border-color);
   position: absolute;
 }
@@ -773,7 +777,7 @@ ul ul::before {
 
 /* rule line when there are checkboxes*/
 ul .task-list-item ul::before {
-  left: 0.15em !important
+  left: 0.15em !important;
 }
 
 /***************************************/
