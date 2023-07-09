@@ -3,11 +3,9 @@
   --vt-fsize: 28px;
   --font-size-normal: 19px;
   --font-size-code: 16px;
-  /* --font-size-code: 24px; */
   --font-size-side-dock: 16px;
   --font-size-side-dock-title: 18px;
   --font-size-status-bar: 16px;
-  /* --font-size-h1: 24px; */
   --font-size-h1: 30px;
   --font-size-h2: 23px;
   --font-size-h3: 22px;
@@ -20,10 +18,8 @@
 
 .theme-light,
 .theme-dark {
-  /* --background-primary: #282a36; */
   --background-primary: #020517;
   --background-primary-alt: #44475a;
-  /* --background-secondary: #282a36; */
   --background-secondary: #020517;
   --background-secondary-alt: #282a36;
   --background-accent: #f8f8f2;
@@ -48,7 +44,6 @@
   --text-error-hover: #ff79c6;
   --text-selection: #6272a4;
   /* Chromium precess this color with alpha channel */
-  /* --text-on-accent: #bd93f9; */
   --text-on-accent: #282a36;
   --interactive-normal: #44475a;
   --interactive-hover: #ff5555;
@@ -680,23 +675,7 @@ thead {
 
 .workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn,
 .workspace-ribbon:not(:hover) .side-dock-actions,
-/* .workspace-ribbon:not(:hover) .side-dock-settings {
-  display: none;
-  transition: all 300ms ease-in-out;
-} */
 
-/* .workspace-ribbon:not(:hover) {
-  width: 0px;
-  transition: all 300ms ease-in-out;
-}
-
-.workspace-split.mod-left-split {
-  margin-left: 0px;
-}
-
-.workspace-split.mod-right-split {
-  margin-right: 0px;
-} */
 
 /***************************************/
 /*           width of content          */
