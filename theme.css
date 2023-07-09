@@ -783,6 +783,30 @@ padding: 12px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' version='1.1' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ccircle cy='12.5' cx='12.5' r='1.75'%3E%3C/circle%3E%3Ccircle cy='12.5' cx='3.5' r='1.75'%3E%3C/circle%3E%3Ccircle cy='3.5' cx='3.5' r='1.75'%3E%3C/circle%3E%3Cpath d='m7.75 2.75h.5m2.5 0h.5m1.5 2.5v-.5m0 3v.5m-9-2.5v4.5'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
+body:not(.tasks) li[data-task=">"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="<"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="b"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="i"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="*"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="!"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="S"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="?"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="/"].task-list-item.is-checked,
+body:not(.tasks) li[data-task='"'].task-list-item.is-checked,
+body:not(.tasks) li[data-task="l"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="I"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="p"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="c"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="f"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="k"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="w"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="u"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="d"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="P"].task-list-item.is-checked,
+body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
+    color: var(--text-normal);
+}
+
 /***************************************/
 /*              popover                */
 /***************************************/
