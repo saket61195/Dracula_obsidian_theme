@@ -135,7 +135,8 @@
   vertical-align: text-bottom;
   height: 15px;
   width: 15px;
-  background-color: #50fa7b;
+  background-color: var(--interactive-accent);
+  filter: brightness(75%)
 }
 
 .nav-folder:not(.mod-root):not(.is-collapsed) .nav-folder-title-content::before {
