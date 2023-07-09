@@ -6,7 +6,7 @@
 
 ## Checkbox Styling
 
-Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc. See below for availale checkbox types.
+Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, cancelled, rescheduled, etc. See below for availale checkbox types.
 
 ![screenshot](./checkbox_list.png)
 
@@ -16,7 +16,7 @@ Dracula Plus supports a wide number of alternate checkbox types. These allow you
 - [ ] to-do
 - [/] incomplete
 - [x] done
-- [-] canceled
+- [-] cancelled
 - [>] forwarded
 - [<] scheduling
 - [t] time
@@ -64,6 +64,8 @@ This theme is provided as-is and is designed for personal use. It has not
 been tested on all platforms or with all features and may not work as expected
 with all future updates. If you notice something looks wrong, please open a bug
 report or pull request so it can be fixed.
+
+## Credits
 
 I did not create the original Dracula Plus colour palette.Full credit for that
 goes to the original theme maker [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) and [obsidian-things](https://github.com/colineckert/obsidian-things) for his things 2 like checkboxes.
