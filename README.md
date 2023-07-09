@@ -6,7 +6,7 @@
 
 ## Checkbox Styling
 
-Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc. See below for availale checkbox types.
+Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, cancelled, rescheduled, etc. See below for availale checkbox types.
 
 ![screenshot](./checkbox_list.png)
 
@@ -16,7 +16,7 @@ Dracula Plus supports a wide number of alternate checkbox types. These allow you
 - [ ] to-do
 - [/] incomplete
 - [x] done
-- [-] canceled
+- [-] cancelled
 - [>] forwarded
 - [<] scheduling
 - [t] time
