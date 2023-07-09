@@ -536,7 +536,7 @@ input[data-task='f']:checked,input[data-task='k']:checked,input[data-task='l']:c
 input[data-task='p']:checked,input[data-task='u']:checked,input[data-task='w']:checked,
 input[data-task='P']:checked,input[data-task='M']:checked,input[data-task='D']:checked, 
 input[data-task='S']:checked,input[data-task='i']:checked,input[data-task='"']:checked,
-input[data-task='?'],input[data-task='t'],
+input[data-task='?']:checked,input[data-task='t']:checked,
 li[data-task='!'] > input:checked,li[data-task='!'] > p > input:checked,
 li[data-task='?'] > input:checked,li[data-task='?'] > p > input:checked,
 li[data-task='*'] > input:checked,li[data-task='*'] > p > input:checked,
