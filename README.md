@@ -4,6 +4,43 @@
 
 ![Screenshot](./demo.png)
 
+## Checkbox Styling
+
+Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc. See below for availale checkbox types.
+
+![screenshot](./checkbox_list.png)
+
+```md
+## Basic
+- [ ] to-do
+- [/] incomplete
+- [x] done
+- [-] canceled
+- [>] forwarded
+- [<] scheduling
+- [t] time
+## Extras
+- [?] question
+- [!] important
+- [*] star
+- ["] quote
+- [l] location
+- [b] bookmark
+- [i] information
+- [S] savings
+- [I] idea
+- [p] pros
+- [c] cons
+- [f] fire
+- [k] key
+- [w] win
+- [u] up
+- [d] down
+- [D] draft pull request
+- [P] open pull request
+- [M] merged pull request
+```
+
 ## Install
 
 1. Download the obsidian.css file.
@@ -26,6 +63,6 @@ with all future updates. If you notice something looks wrong, please open a bug
 report or pull request so it can be fixed.
 
 I did not create the original Dracula Plus colour palette. Full credit for that
-goes to the original [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md). I have selected
+goes to the original theme maker [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md). and [obsidian-things](https://github.com/colineckert/obsidian-things) for his things 2 like checkboxes.I have selected
 colours from the original theme, adjusted them, and added additional colours for
 the purposes of adapting the theme to work with other apps e.g. Obsidian and Notion.
