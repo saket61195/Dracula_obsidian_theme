@@ -69,5 +69,4 @@ report or pull request so it can be fixed.
 
 I did not create the original Dracula Plus colour palette.Full credit for that
 goes to the original theme maker [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) and [obsidian-things](https://github.com/colineckert/obsidian-things) for his things 2 like checkboxes.
-I have selected colors from the original theme, adjusted them and added additional colors for
-the purposes of adapting the theme to work with other apps e.g. Obsidian and Notion.
+I have selected colors from the original theme, adjusted them and added additional colors for the purposes of adapting the theme to work with other apps e.g. Obsidian and Notion.
