@@ -2,7 +2,20 @@
 
 > A dark theme for [Obsidian](https://obisidian.md), compatible to Obsidian V 1.3.4
 
-![Screenshot](./demo.png)
+## New Update
+
+### Dracula Plus with RGB colors
+
+![Screenshot](./rgb1.png)
+![Screenshot](./rgb.png)
+
+## How to set colors
+
+1. Go to settings
+2. Click on appearence
+3. Click on Accent color
+4. Choose your favoruite color
+5. Restart Obsidian
 
 ## Checkbox Styling
 

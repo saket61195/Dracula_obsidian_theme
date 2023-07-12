@@ -18,6 +18,14 @@
 
 .theme-light,
 .theme-dark {
+  --accent-h: 135;
+  --accent-s: 94%;
+  --accent-l: 65%;
+
+  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+
   --background-primary: #020517;
   --background-primary-alt: #44475a;
   --background-secondary: #020517;
@@ -48,9 +56,9 @@
   --interactive-normal: #44475a;
   --interactive-hover: #ff5555;
   /* --interactive-accent: #44475a; */
-  --interactive-accent: #50fa7b;
+  --interactive-accent: var(--color-accent-1);
   --interactive-accent-rgb: 123, 108, 217;
-  --interactive-accent-hover: #ff5555;
+  /* --interactive-accent-hover: #ff5555; */
   --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
   --scrollbar-bg: rgba(255, 255, 255, 0.05);
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
@@ -136,7 +144,7 @@
   height: 15px;
   width: 15px;
   background-color: var(--interactive-accent);
-  filter: brightness(75%)
+  /* filter: brightness(75%) */
 }
 
 .nav-folder:not(.mod-root):not(.is-collapsed) .nav-folder-title-content::before {
@@ -422,7 +430,7 @@ img:hover {
 
 /* code blocks in preview */
 pre code {
-  font-family: monaco !important;
+  /* font-family: monaco !important; */
   font-size: var(--font-size-code) !important;
   padding: 6px !important;
   line-height: normal;
@@ -900,7 +908,7 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
 .graph-view.color-circle,
 .graph-view.color-fill-highlight,
 .graph-view.color-line-highlight {
-  color: var(--text-accent) !important;
+  color: var(--interactive-hover) !important;
 }
 
 .graph-view.color-text {
@@ -908,7 +916,8 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
 }
 
 .graph-view.color-line {
-  color: #6272a4;
+  /* color: #6272a4; */
+  color: var(--interactive-accent);
 }
 
 .graph-view.color-fill {
