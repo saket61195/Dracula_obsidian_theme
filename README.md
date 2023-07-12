@@ -1,4 +1,4 @@
-# Dracula Theme for [Obsidian.md](https://obsidian.md)
+# Dracula Plus Theme for [Obsidian.md](https://obsidian.md)
 
 > A dark theme for [Obsidian](https://obisidian.md), compatible to Obsidian V 1.3.4
 
@@ -12,7 +12,7 @@
 ## How to set colors
 
 1. Go to settings
-2. Click on appearence
+2. Click on Appearence
 3. Click on Accent color
 4. Choose your favoruite color
 5. Restart Obsidian
