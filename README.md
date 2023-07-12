@@ -6,7 +6,7 @@
 
 ### Dracula Plus with RGB colors
 
-![Screenshot](./rgb1.png)
+![Screenshot](./demo1.png)
 ![Screenshot](./rgb.png)
 
 ## How to set colors
