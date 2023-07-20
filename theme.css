@@ -122,7 +122,6 @@ body {
 /* internal embedded link in preview   */
 /*             graph view              */
 /*            settings                 */
-/*            Hide side bar            */
 /*           width of content          */
 /*    at a rule line before ul list    */
 /*  Hide Scrollbar (recommend for mac) */
@@ -995,14 +994,6 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
   background-color: var(--interactive-accent-hover);
   color: var(--text-on-accent);
 }
-
-/***************************************/
-/*            Hide side bar            */
-/***************************************/
-
-.workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn,
-.workspace-ribbon:not(:hover) .side-dock-actions,
-
 
 /***************************************/
 /*           width of content          */
