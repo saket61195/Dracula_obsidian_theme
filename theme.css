@@ -1094,22 +1094,6 @@ ul .task-list-item ul::before {
 /*       Code block in Editor          */
 /***************************************/
 
-/* .cm-keyword {
-  color: var(--code-keyword);
-}
-
-.token.function {
-  color: var(--code-property);
-}
-
-.cm-type {
-  color: var(--code-keyword);
-} */
-
-/* .cm-variable {
-color: var(--code-property);
-} */
-
 .cm-s-obsidian div.HyperMD-codeblock-bg {
   left: 0;
   right: 0;
