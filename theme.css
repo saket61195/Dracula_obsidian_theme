@@ -122,7 +122,6 @@ body {
 /* internal embedded link in preview   */
 /*             graph view              */
 /*            settings                 */
-/*            Hide side bar            */
 /*           width of content          */
 /*    at a rule line before ul list    */
 /*  Hide Scrollbar (recommend for mac) */
@@ -997,14 +996,6 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
 }
 
 /***************************************/
-/*            Hide side bar            */
-/***************************************/
-
-.workspace-ribbon:not(:hover) .workspace-ribbon-collapse-btn,
-.workspace-ribbon:not(:hover) .side-dock-actions,
-
-
-/***************************************/
 /*           width of content          */
 /***************************************/
 
@@ -1093,22 +1084,6 @@ ul .task-list-item ul::before {
 /***************************************/
 /*       Code block in Editor          */
 /***************************************/
-
-/* .cm-keyword {
-  color: var(--code-keyword);
-}
-
-.token.function {
-  color: var(--code-property);
-}
-
-.cm-type {
-  color: var(--code-keyword);
-} */
-
-/* .cm-variable {
-color: var(--code-property);
-} */
 
 .cm-s-obsidian div.HyperMD-codeblock-bg {
   left: 0;
