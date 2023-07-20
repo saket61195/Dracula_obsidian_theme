@@ -16,20 +16,34 @@
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 }
 
+body {
+  --base-h: 212; /* Base hue */
+  --base-s: 15%; /* Base saturation */
+  --base-d: 13%; /* Base lightness Dark Mode  - 0 is black */
+  --base-l: 97%; /* Base lightness Light Mode  - 100 is white */
+  --accent-h: 135; /* Accent hue */
+  --accent-s: 80%; /* Accent saturation */
+  --accent-d: 65%; /* Accent lightness Dark Mode */
+  --accent-l: 68%; /* Accent lightness Light Mode */
+
+  /*Fonts*/
+  --font-monospace-theme: "JetBrains Mono", "Fira Code", Menlo, SFMono-Regular,
+    Consolas, "Roboto Mono", monospace;
+
+  /*Headings*/
+  --text-title-h1: #ff79c6;
+  --text-title-h2: #bd93f9;
+  --text-title-h3: #ff5555;
+  --text-title-h4: #ffb86c;
+  --text-title-h5: #50fa7b;
+  --text-title-h6: #8be9fd;
+}
+
 .theme-light,
 .theme-dark {
-  --accent-h: 135;
-  --accent-s: 94%;
-  --accent-l: 65%;
-
-  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) - 3.8%)
-  );
-
+  --color-pink: #ff22b1;
+  --color-yellow: #e9e90c;
+  --color-cyan: #00ffff;
   --background-primary: #020517;
   --background-primary-alt: #44475a;
   --background-secondary: #020517;
@@ -67,16 +81,12 @@
   --scrollbar-bg: rgba(255, 255, 255, 0.05);
   --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
 
-  --text-title-h1: #ff79c6;
-  --text-title-h2: #bd93f9;
-  --text-title-h3: #ff5555;
-  --text-title-h4: #ffb86c;
-  --text-title-h5: #50fa7b;
-  --text-title-h6: #8be9fd;
   /* --inline-code: #bd93f9; */
   --inline-code: #e9e90c;
   --code-block: #8be9fd;
-  --pre-code: #44475a;
+  /* --pre-code: #44475a; */
+  --pre-code: #1d1c39;
+  --code-background: #1d1c39;
   --blockquote-border: #ffb86c;
   --vim-cursor: #ff5555;
   --border-color: #2b2727;
@@ -274,9 +284,9 @@ a,
 }
 
 /* the url string in editor */
-.cm-s-obsidian span.cm-string {
+/* .cm-s-obsidian span.cm-string {
   color: var(--text-accent-hover) !important;
-}
+} */
 
 /* make external links italics to differentiate */
 a:not(.internal-link) {
@@ -463,6 +473,9 @@ pre code {
   margin: 0 0 var(--empty-line-height) 0;
 }
 
+.markdown-rendered pre {
+  background-color: var(--pre-code);
+}
 /* font-size of in-line block for preview */
 .markdown-preview-view code {
   font-size: var(--font-size-code);
@@ -1081,13 +1094,41 @@ ul .task-list-item ul::before {
 /*       Code block in Editor          */
 /***************************************/
 
+/* .cm-keyword {
+  color: var(--code-keyword);
+}
+
+.token.function {
+  color: var(--code-property);
+}
+
+.cm-type {
+  color: var(--code-keyword);
+} */
+
+/* .cm-variable {
+color: var(--code-property);
+} */
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  left: 0;
+  right: 0;
+  background-color: var(--pre-code);
+}
+
 /* in-line block for editor */
-.cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+
 .cm-s-obsidian
   span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code) {
   background-color: var(--pre-code-bg);
   color: var(--inline-code) !important;
+  bottom: 0px !important;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
+  background-color: var(--pre-code-bg);
+  color: var(--code-block) !important;
   bottom: 0px !important;
 }
 
@@ -1107,15 +1148,20 @@ ul .task-list-item ul::before {
   border: 0px !important;
 }
 
-/*an active line highlight in vim normal mode 
-.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground{
+/* an active line highlight in vim normal mode */
+.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
   background-color: var(--text-selection) !important;
-} */
+}
 
 /* in-line block for preview */
 code {
   color: var(--inline-code) !important;
   bottom: 0px !important;
+}
+
+token.class-name,
+.token.property-access {
+  color: var(--code-function);
 }
 
 /* graph css  */
