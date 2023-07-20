@@ -17,6 +17,12 @@
 4. Choose your favoruite color
 5. Restart Obsidian
 
+## Code Block
+
+Beautiful color combination used in code block
+
+![screenshot](./code.png)
+
 ## Checkbox Styling
 
 Dracula Plus supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, cancelled, rescheduled, etc. See below for availale checkbox types.
