@@ -30,7 +30,7 @@ body {
   --nav-item-background-hover: var(--color-user-request);
   --nav-item-background-active: var(--color-user-request);
   --background-modifier-hover: var(--color-user-request);
-  --indentation-guide-color: var(--color-user-request);
+  --indentation-guide-color: #ffffff30;
   /*Fonts*/
   --font-monospace-theme: "JetBrains Mono", "Fira Code", Menlo, SFMono-Regular,
     Consolas, "Roboto Mono", monospace;
@@ -1237,7 +1237,16 @@ settings:
   - 
     id: color-user-request
     title: 'File Tree'
-    description: Indentation ,file naviagtion file title
+    description: file naviagtion file title
+    type: variable-themed-color
+    opacity: true
+    format: rgb
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  - 
+    id: indentation-guide-color
+    title: 'File Tree: Indentation'
+    description: Indentation
     type: variable-themed-color
     opacity: true
     format: rgb
