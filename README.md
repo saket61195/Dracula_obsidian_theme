@@ -4,6 +4,18 @@
 
 ## New Update
 
+### Style setting added
+
+## How to set Style
+
+1. Go to community plugin
+2. Turn off restricted mode
+3. Click on Browse search Style Settings and Install
+4. Go to Style setting
+5. Change whatever you have option to change
+
+Note: white theme settings will not work, there is no plan now but in future it might be possible to add white theme as well.
+
 ### Dracula Plus with RGB colors
 
 ![Screenshot](./demo1.png)
