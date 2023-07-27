@@ -1258,5 +1258,59 @@ settings:
     format: rgb
     default-light: '#00000033'
     default-dark: '#ffffff33'
+  - 
+    id: heading-colors
+    title: Heading Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: text-title-h1
+    title: Custom H1 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  -
+    id: text-title-h2
+    title: Custom H2 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  -
+    id: text-title-h3
+    title: Custom H3 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  -
+    id: text-title-h4
+    title: Custom H4 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  -
+    id: text-title-h5
+    title: Custom H5 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
+  -
+    id: text-title-h6
+    title: Custom H6 Color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#00000033'
+    default-dark: '#ffffff33'
 
 */
