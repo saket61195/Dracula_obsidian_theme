@@ -17,15 +17,6 @@
 }
 
 body {
-  --base-h: 212; /* Base hue */
-  --base-s: 15%; /* Base saturation */
-  --base-d: 13%; /* Base lightness Dark Mode  - 0 is black */
-  --base-l: 97%; /* Base lightness Light Mode  - 100 is white */
-  --accent-h: 135; /* Accent hue */
-  --accent-s: 80%; /* Accent saturation */
-  --accent-d: 65%; /* Accent lightness Dark Mode */
-  --accent-l: 68%; /* Accent lightness Light Mode */
-
   --color-user-request: #ffffff13;
   --nav-item-background-hover: var(--color-user-request);
   --nav-item-background-active: var(--color-user-request);
@@ -75,21 +66,13 @@ body {
   --text-error-hover: #ff79c6;
   --text-selection: #6272a4;
   /* Chromium precess this color with alpha channel */
-  --text-on-accent: black;
   --interactive-normal: #44475a;
   --interactive-hover: #ff5555;
-  /* --interactive-accent: #44475a; */
-  --interactive-accent: var(--color-accent-1);
+  /* --interactive-accent: var(--color-accent-1); */
   --interactive-accent-rgb: 123, 108, 217;
   /* --interactive-accent-hover: #ff5555; */
-  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
-  --scrollbar-bg: rgba(255, 255, 255, 0.05);
-  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
-
-  /* --inline-code: #bd93f9; */
   --inline-code: #e9e90c;
   --code-block: #8be9fd;
-  /* --pre-code: #44475a; */
   --pre-code: #1d1c39;
   --code-background: #1d1c39;
   --blockquote-border: #ffb86c;
@@ -100,6 +83,7 @@ body {
   --vtcolor2: rgb(82, 236, 247);
   --empty-line-height: 1em;
   --checkbox-color: #bd93f9;
+  --hr-color: white;
   /*also like transparent*/
 }
 
