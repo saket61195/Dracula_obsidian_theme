@@ -2,21 +2,7 @@
 
 > A dark theme for [Obsidian](https://obisidian.md), compatible to Obsidian V 1.3.4
 
-## New Update
-
-### Style setting added
-
-## How to set Style
-
-1. Go to community plugin
-2. Turn off restricted mode
-3. Click on Browse search Style Settings and Install
-4. Go to Style setting
-5. Change whatever you have option to change
-
-Note: white theme settings will not work, there is no plan now but in future it might be possible to add white theme as well.
-
-### Dracula Plus with RGB colors
+## Dracula Plus with RGB colors
 
 ![Screenshot](./demo1.png)
 ![Screenshot](./rgb.png)
@@ -99,4 +85,5 @@ report or pull request so it can be fixed.
 ## Credits
 
 I did not create the original Dracula Plus colour palette.Full credit for that goes to [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) and [obsidian-things](https://github.com/colineckert/obsidian-things) for his checkboxes.
-I have selected colors from the original theme, adjusted them and added additional colors for the purposes of adapting the theme to work with other apps e.g. Obsidian and Notion.
+
+Note: white theme settings will not work, there is no plan now but in future it might be possible to add white theme as well.
