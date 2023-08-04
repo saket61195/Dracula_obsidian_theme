@@ -84,7 +84,6 @@ report or pull request so it can be fixed.
 
 ## Credits
 
-I would like to thank jarodise and his theme [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) and [obsidian-things](https://github.com/colineckert/obsidian-things) for his checkboxes.
-Also thanks to obsidian community.
+I would like to thank jarodise and his theme [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) and [obsidian-things](https://github.com/colineckert/obsidian-things) for his checkboxes.Also thanks to obsidian community.
 
 Note: white theme settings will not work, there is no plan now but in future it might be possible to add white theme as well.
