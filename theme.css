@@ -45,7 +45,8 @@ body {
   --background-secondary: #020517;
   --background-secondary-alt: #282a36;
   --background-accent: #f8f8f2;
-  --background-modifier-border: #f8f8f2;
+  --background-dracula-border: #f8f8f2;
+  --divider-color: white;
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -524,7 +525,7 @@ th {
 }
 
 thead {
-  border-bottom: 3px solid var(--background-modifier-border);
+  border-bottom: 3px solid var(--background-dracula-border);
 }
 
 .table {
@@ -1032,7 +1033,7 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
 
 .workspace-leaf.mod-active .view-header-title,
 .workspace-leaf.mod-active .view-header-icon {
-  color: var(--background-modifier-border);
+  color: var(--background-dracula-border);
 }
 
 .view-header-title,
@@ -1202,7 +1203,7 @@ settings:
     default-light: '#00000033'
     default-dark: '#ffffff33'
   -
-    id: background-modifier-border
+    id: divider-color
     title: 'Background Modifier: Border'
     description: Border Modifer
     type: variable-themed-color
