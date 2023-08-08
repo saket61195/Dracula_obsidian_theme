@@ -1039,7 +1039,8 @@ body:not(.tasks) li[data-task="D"].task-list-item.is-checked {
 .view-header-title,
 .view-header-icon,
 .view-action {
-  color: var(--text-faint);
+  /* color: var(--text-faint); */
+  color: var(--interactive-accent);
 }
 
 .view-header-title {
