@@ -144,7 +144,7 @@ body {
   content: "";
   margin-right: 5px;
   vertical-align: text-bottom;
-  height: 15px;
+  height: 18px;
   width: 15px;
   background-color: var(--interactive-accent);
   /* filter: brightness(75%) */
