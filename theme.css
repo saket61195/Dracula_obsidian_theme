@@ -329,7 +329,8 @@ a:not(.internal-link) {
 /* normal text outside of headings and code of preview */
 .markdown-preview-view,
 .mod-single-child .markdown-preview-view {
-  font-family: var(--font-family-editor);
+  /* font-family: var(--font-family-editor); */
+  font-family: var(--font-text);
   font-size: var(--font-size-normal);
   /* padding-top: 0px; */
   padding-left: 2% !important;
