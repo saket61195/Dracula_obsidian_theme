@@ -5,7 +5,6 @@
 ## Dracula Plus with RGB colors
 
 ![Screenshot](./final_demo.png)
-![Screenshot](./rgb.png)
 
 ## How to set colors
 
@@ -14,6 +13,8 @@
 3. Click on Accent color
 4. Choose your favoruite color
 5. Restart Obsidian
+
+![Screenshot](./rgb.png)
 
 ## Code Block
 
