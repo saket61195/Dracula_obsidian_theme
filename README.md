@@ -1,6 +1,6 @@
 # Dracula Plus Theme for [Obsidian.md](https://obsidian.md)
 
-> A dark theme for [Obsidian](https://obisidian.md), compatible to Pc,Tables,Mobile.
+> A dark theme for [Obsidian](https://obisidian.md), compatible to Pc,Tablet,Mobile.
 
 ## Dracula Plus with RGB colors
 
