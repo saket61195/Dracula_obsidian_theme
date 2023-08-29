@@ -134,10 +134,6 @@ body {
 .is-focused
   .mod-active
   .workspace-tab-header.is-active
-  .workspace-tab-header-inner-icon,
-.is-focused
-  .mod-active
-  .workspace-tab-header.is-active
   .workspace-tab-header-inner-title {
   color: var(--interactive-accent);
 }
