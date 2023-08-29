@@ -126,6 +126,26 @@ body {
   font-size: 14px;
 }
 
+.workspace-tab-header:hover {
+  opacity: 1;
+  color: var(--interactive-accent);
+}
+
+.is-focused
+  .mod-active
+  .workspace-tab-header.is-active
+  .workspace-tab-header-inner-icon,
+.is-focused
+  .mod-active
+  .workspace-tab-header.is-active
+  .workspace-tab-header-inner-title {
+  color: var(--interactive-accent);
+}
+
+.nav-file-title.is-active {
+  color: var(--interactive-accent);
+}
+
 .nav-folder.mod-root > .nav-folder-title,
 .workspace-drawer-header-name-text {
   font-size: var(--vt-fsize);
