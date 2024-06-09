@@ -72,6 +72,10 @@ Dracula Plus supports a wide number of alternate checkbox types. These allow you
 
 4. Restart Obsidian.
 
+## Old Version theme before 1.6.3
+
+download link [old_obsidian](https://github.com/saket61195/Dracula_obsidian_theme/tree/cde3385518f4a62b8997447ab9206ae408278203)
+
 ## License
 
 [MIT License](./LICENSE)
