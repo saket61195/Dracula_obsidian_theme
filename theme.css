@@ -435,7 +435,7 @@ img:hover {
   font-family: var(--font-family-editor);
   font-weight: 500;
   font-size: var(--font-size-h3);
-  color: var(--text-title-h3);
+  /* color: var(--text-title-h3); */
 }
 
 .cm-header-4,
